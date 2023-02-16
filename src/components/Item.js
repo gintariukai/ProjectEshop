@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 
 export class Item extends Component {
-    render() {
+
+render() {
         return (
             <div className="item">
                 <img src={"./img/" + this.props.item.img} />
