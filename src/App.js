@@ -47,7 +47,7 @@ class App extends React.Component {
         {
           id: 5,
           title: 'REMEDY Sebum Volumizing Shampoo',
-          img: 'Sebum-Volumizing-Shampoo.jpg',
+          img: 'Sebum-Volumizing-Remedy.jpg',
           desc:  'Apimtį didinantis šampūnas riebiems plaukams. Kedras ir Bergamotė. Valantis šampūnas mažinantis sebo kaupimąsi ir odos hiperhidrozę. Stiprina plaukus ir didina jų apimtį.',
           category: 'ABUNDANCE LINE',
           size: '250ml',
