@@ -29,7 +29,7 @@ class App extends React.Component {
         {
           id: 3,
           title: 'ABUNDANCE Shampoo Moringa',
-          img: 'Silk-Moringa.jpg',
+          img: 'Shampoo-Moringa.jpg',
           desc:  'Šampūnas Moringa. Regeneruojantis ir restruktūrizuojantis šampūnas su Moringa aliejumi. Tinka sausiems, dažytiems ir natūraliems plaukams. Suteikia plaukams apimtį ir pagerina plauko struktūrą.',
           category: 'ABUNDANCE LINE',
           size: '250ml',
@@ -43,6 +43,15 @@ class App extends React.Component {
           category: 'ABUNDANCE LINE',
           size: ' ',
           price: '42.00'
+        },
+        {
+          id: 5,
+          title: 'REMEDY Sebum Volumizing Shampoo',
+          img: 'Sebum-Volumizing-Shampoo.jpg',
+          desc:  'Apimtį didinantis šampūnas riebiems plaukams. Kedras ir Bergamotė. Valantis šampūnas mažinantis sebo kaupimąsi ir odos hiperhidrozę. Stiprina plaukus ir didina jų apimtį.',
+          category: 'ABUNDANCE LINE',
+          size: '250ml',
+          price: '18.00'
         }
       ] 
     }
