@@ -96,6 +96,20 @@ header .shop-cart .item b {
     font-weight: 600;
 }
 
+header .shop-cart .item .delete-icon {
+    color: #068db0;
+    float: right;
+    position: relative;
+    top: -25px;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+}
+
+header .shop-cart .item .delete-icon:hover {
+    color: #0d2882;
+    transform: scale(1.5);
+}
+
 header .presentation {
     margin: 50px 0;
     background: url("./img/Remedy.jpeg") no-repeat;
@@ -111,7 +125,7 @@ header .presentation::after {
     content: "MY.ORGANICS haircare and styling for gorgeous, glossy results";
     position: absolute;
     top: 100px;
-    left: 20px;
+    right: 20px;
     width: 300px;
     font-size: 40px;
     font-weight: 600;
@@ -123,7 +137,7 @@ header .presentation::before {
     content: "Made in Italy";
     position: absolute;
     top: 350px;
-    left: 20px;
+    right: -120px;
     width: 300px;
     font-size: 15px;
     font-weight: 300;
