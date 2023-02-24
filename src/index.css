@@ -84,6 +84,7 @@ header .shop-cart .item img {
     width: 70px;
     float: left;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 header .shop-cart .item h2 {
