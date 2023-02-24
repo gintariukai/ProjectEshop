@@ -65,8 +65,7 @@ header .shop-cart {
     box-shadow: 4px 5px 15px -7px #606060;
     z-index: 1000;
 
-    padding: 20px;
-    padding-bottom: 0;
+    padding: 20px 20px 0;
 }
 
 header .shop-cart .empty h2 {

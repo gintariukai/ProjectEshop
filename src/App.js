@@ -9,13 +9,14 @@ class App extends React.Component {
     super(props)
     this.state = {
       orders: [],
+      currentItems: [],
       items: [
         {
           id: 1,
           title: 'ABUNDANCE Mask Moringa',
           img: 'Mask-Moringa.jpg',
           desc: 'Kaukė plaukams su Moringa. Giliai drėkina, maitina ir atstato plaukų struktūrą, suteikia švelnumo ir žvilgesio. Neapsukina plaukų. Tinka visų tipų plaukams, net ir labai nualintiems. Rekomenduojama po plaukų dažymo ar balinimo.',
-          category: 'ABUNDANCE LINE',
+          category: 'Abundance',
           size: '250ml',
           price: '20.00'
         },
@@ -24,7 +25,7 @@ class App extends React.Component {
           title: 'ABUNDANCE Silk Moringa',
           img: 'Silk-Moringa.jpg',
           desc:  'Šilkinis nenuplaunamas plaukų kremas Moringa. Šilkiškumą suteikiantis nenuskalaujamas kremas. Neapsunkina, gerina plaukų struktūrą, atpalaiduoja ir drėkina plaukus, palengvina šukuosenos formavimą. Kremas apsaugo plaukus nuo karščio poveikio naudojant džiovintuvą ar žnyples. Apsaugo nuo išsišakojusių galiukų atsiradimo.',
-          category: 'ABUNDANCE LINE',
+          category: 'Bronze',
           size: '100ml',
           price: '24.00'
         },
@@ -33,7 +34,7 @@ class App extends React.Component {
           title: 'ABUNDANCE Shampoo Moringa',
           img: 'Shampoo-Moringa.jpg',
           desc:  'Šampūnas Moringa. Regeneruojantis ir restruktūrizuojantis šampūnas su Moringa aliejumi. Tinka sausiems, dažytiems ir natūraliems plaukams. Suteikia plaukams apimtį ir pagerina plauko struktūrą.',
-          category: 'ABUNDANCE LINE',
+          category: 'Abundance ',
           size: '250ml',
           price: '18.00'
         },
@@ -42,7 +43,7 @@ class App extends React.Component {
           title: 'ABUNDANCE Repair Moringa',
           img: 'Repair-Moringa.jpg',
           desc:  'Rekonstruojantis produktas Moringa. REPAIR Moringa Abundance. Regeneruojantis ir giliai rekonstruojantis plaukų struktūrą produktas. Ypatinga produkto sudėtis, regeneruoja ir modifikuoja plaukų struktūrą. Plaukai tampa sveikesniais ir žvilgančiais. Atgaivina plaukų struktūrą jie tampa minkštais ir švelniais vienai/dviem savaitėms. Išryškina garbanotus plaukus. Plaukai mažiau šiaušiasi. Gerina pažeistų plaukų struktūrą. Maitina pažeistus, saus ir trapius plaukus.',
-          category: 'ABUNDANCE LINE',
+          category: 'Shape',
           size: ' ',
           price: '42.00'
         },
@@ -51,24 +52,37 @@ class App extends React.Component {
           title: 'REMEDY Sebum Volumizing Shampoo',
           img: 'Sebum-Volumizing-Remedy.jpg',
           desc:  'Apimtį didinantis šampūnas riebiems plaukams. Kedras ir Bergamotė. Valantis šampūnas mažinantis sebo kaupimąsi ir odos hiperhidrozę. Stiprina plaukus ir didina jų apimtį.',
-          category: 'ABUNDANCE LINE',
+          category: 'Remedy',
           size: '250ml',
           price: '18.00'
         }
       ] 
     }
+    this.state.currentItems = this.state.items
     this.addToOrder = this.addToOrder.bind(this)
     this.deleteOrder = this.deleteOrder.bind(this)
+    this.chooseCategory = this.chooseCategory.bind(this)
   }
   render() {
     return (
       <div className="wrapper">
         <Header orders={this.state.orders} onDelete={this.deleteOrder} />
-        <Categories />
-        <Items items={this.state.items} onAdd={this.addToOrder} />
+        <Categories chooseCategory={this.chooseCategory} />
+        <Items items={this.state.currentItems} onAdd={this.addToOrder} />
         <Footer />
       </div>
     )
+  }
+
+  chooseCategory(category) {
+    if (category === "all") {
+      this.setState({currentItems: this.state.items})
+      return
+    }
+
+    this.setState({
+      currentItems: this.state.items.filter(el => el.category === category)
+    })
   }
 
   deleteOrder(id) {
