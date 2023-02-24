@@ -88,7 +88,7 @@ header .shop-cart .item img {
 }
 
 header .shop-cart .item h2 {
-    font-size: 15px;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
@@ -109,6 +109,14 @@ header .shop-cart .item .delete-icon {
 header .shop-cart .item .delete-icon:hover {
     color: #0d2882;
     transform: scale(1.5);
+}
+
+header .shop-cart .summa {
+    float: left;
+    width: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 
 header .presentation {
