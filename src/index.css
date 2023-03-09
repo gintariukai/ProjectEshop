@@ -24,6 +24,7 @@ header {
 header .logo {
     font-weight: 600;
     font-size: 25px;
+    margin-left: 15px;
 }
 
 header ul.nav {
